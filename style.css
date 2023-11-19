@@ -6,3 +6,61 @@
 body{
     background-color: #FFF6F6;
 }
+
+.boxes{
+   display: flex;
+   background-color: #FFDFDF;
+   width: 100%;
+   border-radius: 7px;  
+}
+
+.loginft img{
+    height: 400px;
+    width: auto;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.box{
+    text-align: center;
+    margin: auto;    
+}
+
+.box h2{
+    margin-bottom: 40px;
+}
+
+form input{
+    border: 1px solid #F875AA;
+    border-radius: 4px;
+    width: 300px;
+    padding: 8px ;
+    background-color: #FFDFDF;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.loginbuton button{
+    border-radius: 4px;
+    background-color: #F875AA;
+    padding: 9px 30px;
+    border: 1px solid #F875AA;
+    margin-top: 30px;
+}
+
+.Login_section{
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 50px;
+}
+
+::placeholder{
+    color: black;
+    
+}
