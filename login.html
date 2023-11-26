@@ -22,7 +22,7 @@
                 </li>
                 
                 <li>
-                    <a href="#">
+                    <a href="store.html">
                         Store
                     </a>
                 </li>
@@ -61,9 +61,9 @@
                 </div>
                 <div class="box">
                     <h2>Welcome back!</h2>
-                    <form>
-                        <input type="email" placeholder="Your email">
-                        <input type="password" placeholder="Your password">
+                    <form onsubmit="return validimiLogin()">
+                        <input id="email" type="email" placeholder="Your email">
+                        <input id="password" type="password" placeholder="Your password">
                         <div class="loginbuton">
                             <button type="submit">Login</button>
                         </div>  
@@ -74,5 +74,7 @@
     </section>
 
  
+
+    <script src="./script/script.js"></script>
 </body>
 </html>
