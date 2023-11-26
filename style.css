@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #FFF6F6;
+}
+
+.boxes{
+   display: flex;
+   background-color: #FFDFDF;
+   width: 100%;
+   border-radius: 7px;  
+}
+
+.loginft img{
+    height: 400px;
+    width: auto;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.box{
+    text-align: center;
+    margin: auto;    
+}
+
+.box h2{
+    margin-bottom: 40px;
+}
+
+form input{
+    border: 1px solid #F875AA;
+    border-radius: 4px;
+    width: 300px;
+    padding: 8px ;
+    background-color: #FFDFDF;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginbuton button{
+    border-radius: 4px;
+    background-color: #F875AA;
+    padding: 9px 30px;
+    border: 1px solid #F875AA;
+    margin-top: 30px;
+}
+
+.Login_section{
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 50px;
+}
+
+::placeholder{
+    color: black;   
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -40px;
+}
+
+.linku{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-decoration-line: none;
+    color: black;
+}
+
+.linku ul{
+    list-style: none;
+    display: flex;
+    text-decoration-line: none;
+    color: black;
+}
+
+.linku a{
+    text-decoration-line: none;
+    color: black;
+    margin-left: 40px;
+    margin-right:40px;
+    font-size: 20px;
+    font-weight: bold; 
+}
+
+.linku a.active{
+    color: #F875AA;
+}
+
+.homee{
+    display: flex;
+    margin-top: 90px;
+}
+
+.homecontent h2{
+    margin-bottom: 40px;
+    text-align: left;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.homecontent{
+    margin-right: 200px;
+}
+
+.homelogo img{
+    height: 300px;
+    width:auto;
+    border-radius: 15px;
+}
+
+.homecontent p{
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+}
+
+.homebuttons .Pink{
+    background-color: #F875AA;
+    margin-left: 50px;
+    padding: 10px 25px;
+    border-radius: 4px;
+    margin-right: 38px;
+    background: transparent;
+    border: 1px solid palevioletred;
+}
+
+.homebuttons .White{
+    background-color: lightcoral;
+    border-radius: 4px;
+    padding: 10px 25px;
+    border-color: #F875AA;
+}
+
+.homebuttons a:hover{
+    text-decoration: underline;
+    background-color: #F875AA;
+    transition: 0.4s;
+}
+
+.homebanner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(img/bannerfoto.jfif);
+    position: relative;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    margin-top: 122px;
+    background-attachment: fixed; 
+}
+
+.homebanner  p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: white;
+}
+
+.productboxes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productbox {
+    background-color: rgb(249, 213, 227);
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+
+.producttitle h3{
+    margin-top: 122px;
+   
+}
+
+.producttitle{
+    display: flex;
+}
+.producttitle .pinkt{
+    color: #F875AA;
+
+}
+
+.pinkp{
+    margin-bottom: 8px;
+    color: #F875AA;
+}
+
+.price{
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.productbox a{
+    text-decoration: none;
+    color: unset;
+}
+
+.abcontent{
+   margin-top: 122px;
+}
+
+.abboxes{
+   display: grid;
+   grid-template-columns: auto auto;
+   justify-content: space-between;
+   gap:30px 200px;
+    
+}
+
+.abbox{
+    background-color: rgb(249, 213, 227); 
+    margin-bottom: 40px;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.abcon{
+    color: #F875AA;
+    margin-bottom: 40px;
+}
+
+.abcontent{
+    display: flex;
+
+}
+
+.abbox p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+
