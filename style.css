@@ -34,7 +34,7 @@ body{
     margin-bottom: 40px;
 }
 
-form input{
+.loginform input{
     border: 1px solid #F875AA;
     border-radius: 4px;
     width: 300px;
@@ -172,17 +172,25 @@ form input{
 }
 
 .productboxes {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 100px;
 }
 
 .productbox {
     background-color: rgb(249, 213, 227);
-    padding-left: 30px;
-    padding-right: 30px;
+   padding: 30px;
     margin-top: 40px;
     border-radius: 20px;
+    
 }
+.productbox img{
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+
 
 .producttitle h3{
     margin-top: 122px;
@@ -200,6 +208,7 @@ form input{
 .pinkp{
     margin-bottom: 8px;
     color: #F875AA;
+    margin-top: 20px;
 }
 
 .price{
@@ -218,7 +227,7 @@ form input{
 
 .abboxes{
    display: grid;
-   grid-template-columns: auto auto;
+   grid-template-columns: auto auto ;
    justify-content: space-between;
    gap:30px 200px;
     
@@ -249,7 +258,172 @@ form input{
     font-weight: bold;
 }
 
+.applesc_photo img{
+    width: auto;
+    height: 300px;   
+}
+
+.applesc_container h2{
+    margin-top: 122px;
+    margin-bottom: 25px;
+}
+
+.applesc_container p{
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.applesc_container {
+    text-align: center;
+}
+
+.applesc_photo{
+    text-align: center;
+}
+
+.ct_form input , textarea{
+    border: 1px solid #ba2e66;
+    border-radius: 4px;
+    width: 300px;
+    padding: 8px ;
+    background-color: #fbf6f6;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
+.contact_form_icon{
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon_box{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 23px;
+}
+
+.icon i{
+    font-size: 32px;
+    color: #F875AA;
+}
+
+.icon_info{
+    margin-left: 27px;
+}
+
+.icon_info a{
+    color: rgb(226, 152, 152);
+}
+
+.icon_info h3{
+    color: rgb(236, 79, 79);
+}
+
+.contactcc h3{
+    margin-top: 122px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.ct_form button{
+    background-color: #f36ba1;
+    margin-left: 50px;
+    padding: 10px 46px;
+    border-radius: 4px;
+    margin-top: 35px;
+    border: 1px solid palevioletred;
+    float: right;
+} 
 
 
 
+.fcontent{
+    text-align: center;
+    
+}
 
+
+
+.fcontent button{
+    border-radius: 50%;
+    background-color: #ba2e66;
+    border: none;
+    margin-left: -36px;
+    cursor: pointer;
+}
+
+
+
+.fcontent h2{
+   
+    margin-bottom: 50px;
+}
+.fa-chevron-right:before{
+    text-align: center;
+    padding: 18px 11px;
+}
+
+i.fa.fa-chevron-right{
+    height: 25px;
+    width: 28px;
+    line-height: 25px;
+}
+
+.newsletter_form{
+    margin: 0 auto;
+}
+.newsletter_form input{
+    width: 30%;
+    border-radius: 80px;
+    padding: 8px 12px;
+}
+
+.footer_section{
+    background-color: #F875AA;
+    padding: 22px;
+    margin-top: 122px;
+}
+
+.navigation{
+    display: flex;
+    justify-content: center;
+}
+
+.navigation ul{
+    list-style: none;
+    display: flex;
+    text-decoration-line: none;
+    color: black;
+    margin-top: 90px;
+}
+
+.navigation a{
+    text-decoration-line: none;
+    color: black;
+    margin-left: 40px;
+    margin-right:40px;
+    font-size: 15px; 
+}
+
+.footeric{
+    display: flex;
+    margin-top: 70px;
+    justify-content: center;
+    gap: 23px;
+    align-items: center;
+   
+}
+
+.footerc label{
+    font-size: 10px;
+   
+}
+
+.footerc{
+    text-align: center;
+    margin-top: 50px;
+}
