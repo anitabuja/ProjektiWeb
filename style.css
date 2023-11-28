@@ -128,10 +128,8 @@ body {
 
 .homebuttons .Pink {
   background-color: #f875aa;
-  margin-left: 50px;
   padding: 10px 25px;
   border-radius: 4px;
-  margin-right: 38px;
   background: transparent;
   border: 1px solid palevioletred;
 }
@@ -466,7 +464,6 @@ hr {
   height: 400px;
   background-position: center;
   background-size: cover;
-
   background-attachment: fixed;
 }
 
@@ -479,10 +476,10 @@ hr {
   display: none;
 }
 
-.slider{
+.slider {
   position: relative;
 }
-.next{
+.next {
   position: absolute;
   top: 50%;
   right: 31px;
@@ -497,7 +494,7 @@ hr {
   text-align: center;
   line-height: 25px;
 }
-.prev{
+.prev {
   position: absolute;
   top: 50%;
   left: 31px;
@@ -513,12 +510,33 @@ hr {
   line-height: 25px;
 }
 
-.slide_img img{
+.slide_img img {
   width: 100%;
   height: 350px;
   object-fit: contain;
 }
 
-.singleproductconbox, .slider{
+.singleproductconbox,
+.slider {
   width: 50%;
+}
+.singleproduct_button {
+  float: right;
+  margin-top: 30px;
+}
+.singleproduct_button a{
+  padding: 10px 25px;
+  border-radius: 4px;
+  background: #f36ba1aa;
+  border: 1px solid palevioletred;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.singleproduct_button a:hover{
+  background: #f36ba1;
+}
+
+.aboutusbanner img{
+  width: 100%;
 }
