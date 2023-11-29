@@ -540,3 +540,160 @@ hr {
 .aboutusbanner img {
   width: 100%;
 }
+
+
+@media screen and (max-width:768px){
+
+  .homee{
+    flex-direction: column;
+  }
+
+  .homecontent{
+    margin-right: 0;
+  }
+
+
+  .homebuttons .Pink{
+    padding: 10px 18px;
+  }
+
+  .homelogo img{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .homebanner p{
+    transform: translateY(-50%);
+    left: 0;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .homebanner{
+    height: 300px;
+    margin-top: 50px;
+  }
+
+  .producttitle h3{
+    font-size: 14px;
+    margin-top: 50px;
+  }
+
+  .productboxes{
+    grid-template-columns: auto;
+    gap: 0;
+  }
+
+  .abcontent h3{
+    font-size: 12px;
+    margin-top: 50px;
+  }
+
+  .container{
+    width: 90%;
+  }
+
+  .abboxes{
+    grid-template-columns: auto;
+    gap: 0;
+  }
+
+  .abbox p {
+    font-size: 16px;
+    margin-top: 50px;
+  }
+
+  .abcontent {
+    margin-top: 50px;
+  }
+
+  .applesc_container h2{
+    margin-top: 50px;
+  }
+
+  .footer_section{
+    margin-top: 50px;
+  }
+
+  .applesc_photo img{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+  }
+  
+  .contactcc h3{
+    margin-top: 50px;
+  }
+
+  .contact_form_icon{
+    flex-direction: column;
+  }
+
+  .icon_box{
+    justify-content: left;
+  }
+
+  .newsletter_form input{
+    width: 80%;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .homecontent h2{
+    font-size: 29px;
+  }
+
+  .homecontent p {
+    font-size: 18px;
+  }
+
+  .Login_section{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .boxes{
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .loginft img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .aboutusbanner img{
+    height: auto;
+  }
+
+  .storebanner {
+    height: 300px;
+  }
+
+  .singleproduct_stuf{
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .next{
+    right: -29px;
+  }
+
+  .prev{
+    left: -29px;
+  }
+
+  .singlecon h1 {
+    font-size: 30px;
+  }
+
+  .singleproductconbox , .slider{
+    width: unset;
+  }
+}
