@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,82 +8,62 @@
     <link rel="stylesheet" href="plugins/font-awesome-4.7.0 (1)/font-awesome-4.7.0/css/font-awesome.min.css">
     <title>Register</title>
 </head>
+
 <body>
-    
-    <div class="menu">
-        <div class="logo">
-            <img src="img/logoa-removebg-preview.png" alt="Apple logo">
+
+    <nav class="underline_nav">
+        <input id="nav-toggle" type="checkbox">
+        <a href="index.html">
+            <div class="logo">
+                <img src="img/logoa-removebg-preview.png" alt="Apple logo">
+            </div>
+        </a>
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+
+
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+
+
+
+    <form action="">
+        <div class="container register_form">
+            <h1>Register</h1>
+
+            <hr>
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Name" name="name" id="name" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+            <hr>
+
+
+            <button type="submit" class="registerbtn">Register</button>
         </div>
-        <div class="linku">
-            <ul>
 
-                <li>
-                    <a class="active" href="index.html">
-                        Home
-                    </a>
-                </li>
 
-                <li>
-                    <a href="store.html">
-                        Store
-                    </a>
-                </li>
-
-                <li>
-                    <a href="aboutus.html">
-                        About us
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Contact Us
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Register
-                    </a>
-                </li>
-                <li>
-                    <a href="login.html">
-                        Login
-                    </a>
-            </ul>
         </div>
+    </form>
 
 
-    </div>
-
-    
-    
-    <form action="action_page.php">
-        <div class="container">
-          <h1>Register</h1>
-        
-          <hr>
-          <label for="name"><b>Name</b></label>
-           <input type="text" placeholder="Name" name="name" id="name" required>
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" id="email" required>
-      
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-      
-          <label for="psw-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-          <hr>
-      
-          
-          <button type="submit" class="registerbtn">Register</button>
-        </div>
-      
-        
-        </div>
-      </form>
-    
-    
 
 </body>
+
 </html>
