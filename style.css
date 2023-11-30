@@ -75,7 +75,7 @@ nav .logo a:hover{
 }
 
 nav {
-    position: fixed;
+    /* position: fixed; */
     z-index: 10;
     left: 0;
     right: 0;
@@ -835,4 +835,50 @@ hr {
   .slider {
     width: unset;
   }
-}
+
+
+  }
+
+  /* Full-width input fields */
+ .register_form input[type=text], .register_form input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  .register_form input[type=text]:focus, .register_form input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit/register button */
+  .registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+    opacity:1;
+  }
+  
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
