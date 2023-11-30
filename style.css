@@ -75,26 +75,24 @@ nav .logo a:hover{
 }
 
 nav {
-    /* position: fixed; */
-    z-index: 10;
-    left: 0;
-    right: 0;
-    top: 0;
-    font-family: 'Montserrat', sans-serif;
-    padding: 0 5%;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 5%;
   height: 100px;
   background-color: transparent;
 }
 nav .logo {
-    float: left;
-    width: 40%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-size: 24px;
+  float: left;
+   width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
   color: #f5cb5c !important;
   text-decoration: none;
-  /* margin-top: 2%; */
+  
 }
 nav .logo strong{
   margin-left: 6px;
@@ -128,19 +126,18 @@ nav .icon-burger {
     display: none;
     position: absolute;
     right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 5%;
 }
 nav .icon-burger .line {
     width: 30px;
     height: 5px;
-    background-color: #e5e5e5;
+    background-color: #f36ba1;
     margin: 5px;
     border-radius: 3px;
     transition: all .3s ease-in-out;
 }
 
-/* Line Under In Hover */
+
 nav.underline_nav ul li a {
   position: relative;
 }
@@ -639,6 +636,49 @@ hr {
   width: 100%;
 }
 
+.register_form input[type=text], .register_form input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.register_form input[type=text]:focus, .register_form input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
 
   nav .logo {
@@ -658,7 +698,7 @@ hr {
     height: auto;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,.9);
     overflow: hidden;
     box-sizing: border-box;
     transition: all .5s ease-in-out;
@@ -666,9 +706,13 @@ hr {
   nav .links a {
     font-size: 20px;
     padding-bottom: 10px;
+    color: white;
   }
   nav :checked ~ .links {
     bottom: 0%;
+  }
+  .nav .icon-burger .line{
+    background-color: #f36ba1 !important;
   }
   nav .icon-burger {
     display: block;
@@ -836,49 +880,6 @@ hr {
     width: unset;
   }
 
-
   }
 
-  /* Full-width input fields */
- .register_form input[type=text], .register_form input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
   
-  .register_form input[type=text]:focus, .register_form input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  /* Overwrite default styles of hr */
-  hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-  
-  /* Set a style for the submit/register button */
-  .registerbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-  }
-  
-  .registerbtn:hover {
-    opacity:1;
-  }
-  
-  
-  /* Set a grey background color and center the text of the "sign in" section */
-  .signin {
-    background-color: #f1f1f1;
-    text-align: center;
-  }
