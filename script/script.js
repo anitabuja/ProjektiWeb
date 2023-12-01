@@ -10,7 +10,6 @@ function validimiLogin() {
     return true;
 }
 
-
 let slideIndex = 1; 
 
 showSlides(slideIndex);
