@@ -645,8 +645,9 @@ height: 400px;
 background-position: center;
 background-size: cover;
 background-attachment: fixed;
-
 }
+*/
+
 
 .links a.active{
   color: #ba2e66;
@@ -656,6 +657,7 @@ fieldset{
   padding: 30px;
   margin-top: 50px;
 }
+
 
 
 
@@ -898,4 +900,11 @@ fieldset{
   
   
   
+ 
+
+  
+  .Registersection {
+    padding-left: 0;
+    padding-right: 0;
+  }
  
