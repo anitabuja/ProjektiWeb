@@ -41,7 +41,7 @@ body {
   width: 300px;
   padding: 8px;
   background-color: #ffdfdf;
-  margin-top: 15px;
+ margin-bottom: 15px;
   display: flex;
   flex-direction: column;
 }
@@ -243,8 +243,7 @@ nav.underline_nav ul li a:hover:after {
 }
 
 .homebanner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(img/bannerfoto.jfif);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/bannerfoto.jfif);
   position: relative;
   background-repeat: no-repeat;
   width: 100%;
@@ -646,7 +645,7 @@ background-position: center;
 background-size: cover;
 background-attachment: fixed;
 }
-*/
+
 
 
 .links a.active{
@@ -898,8 +897,35 @@ fieldset{
     opacity: 0.9;
   }
   
-  
-  
+
+  .registerft img{
+    height: 100%;
+    width: 100%;
+    
+  }
+
+  .registerbox{
+    margin-left: 30px;
+    padding: 20px;
+  }  
+
+  .registerform input{
+    border: none;
+    padding: 5px;
+    background-color:  #ffdfdf;
+    outline: none;
+  }
+
+  hr{
+    margin-top: 5px;
+    height: 2px;
+    background-color:purple;
+    border: none;
+  }
+
+  .registerbox h2{
+    margin-bottom: 30px;
+  }
  
 
   

@@ -3,7 +3,7 @@ function validimiLogin() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    if (email === "" || password === "") {
+     if (email === "" || password === "") {
         alert("Ju lutem plotesoni te dhenat");
         return false; 
     }
@@ -40,33 +40,3 @@ function showSlides(n) {
 }
 
 
-function validateForm(){
-  var name=document.getElementById('name').value;
-  var email=document.getElementById('email').value;
-  var psw=document.getElementById('psw').value;
-  var pswRepeat=document.getElementById('pswRepeat').value;
-
-
-  
-  var nameRegex = /^[a-zA-Z\s]+$/;
-  if(!nameRegex.test(name)){
-      alert('please enter a valid name.');
-      return false;
-  }
-
-  var emailRegex = /^[^\s@]+@[^\s@]\.[^\s@]+$/;
-  if(!emailRegex.test(email)){
-      alert('please enter a valid email.');
-      return false;
-  }
-
-  if(psw.length <6){
-      alert('pasword must be at least 6 characters');
-      return false;
-  }
-  if(psw !== pswRepeat){
-      alert('paswords do not match');
-      return false;
-  }
-  return true;
-}
