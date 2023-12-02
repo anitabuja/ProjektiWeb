@@ -637,11 +637,6 @@ hr {
 }
 
 .contactusbanner{
-<<<<<<< HEAD
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(img/contactus.jpg);
-  position: relative;
-  background-repeat: no-repeat;
-=======
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/contactus.jpg);
 position: relative;
 background-repeat: no-repeat;
@@ -653,7 +648,7 @@ background-attachment: fixed;
 
 }
 
-..links a.active{
+.links a.active{
   color: #ba2e66;
 }
 
@@ -662,49 +657,7 @@ fieldset{
   margin-top: 50px;
 }
 
-.register_form input[type=text], .register_form input[type=password] {
->>>>>>> 8689a2e920e4045622631c2de24cfaa242c90941
-  width: 100%;
-  height: 400px;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
 
-
-.register_form input[type=text]:focus, .register_form input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-
-.registerbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.registerbtn:hover {
-  opacity:1;
-}
-
-
-
-.signin {
-  background-color: #f1f1f1;
-  text-align: center;
-}
 
 @media screen and (max-width: 768px) {
 
@@ -909,16 +862,9 @@ hr {
   }
 
   }
-
-  }
-  * {box-sizing: border-box}
-
-  .container {
-    padding: 16px;
-  }
   
   
-  input[type=text], input[type=password] {
+  input[type=text].register_email , input[type=password].register_email {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -927,7 +873,7 @@ hr {
     background: #f1f1f1;
   }
   
-  input[type=text]:focus, input[type=password]:focus {
+  input[type=text]:focus.register_email, input[type=password]:focus.register_email {
     background-color: #ddd;
     outline: none;
   }
