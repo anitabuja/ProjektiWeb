@@ -38,5 +38,31 @@ function showSlides(n) {
 
   slides[slideIndex-1].style.display = "block";  
 }
+function validimiRegister(){
 
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const phone = document.getElementById("phone").value;
+const password = document.getElementById("password").value;
 
+if(name === ""){
+  alert("Ju lutem vendosni emri tuaj");
+  return false;
+}
+
+if(email==="" || !email.includes("@")){
+  alert("Ju lutem vendosni nje email valide");
+  return false;
+}
+
+if(phone===|"" || isNaN(phone)){
+  alert("ju lutem vendosni nje numer telefoni valid");
+  return false;
+}
+
+if(password=== ""){
+  alert("ju lutem vendosni nje pasword valid");
+  return false;
+}
+return true;
+}
