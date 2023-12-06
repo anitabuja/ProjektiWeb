@@ -36,33 +36,45 @@ function showSlides(n) {
     
   }
 
-  slides[slideIndex-1].style.display = "block";  
-}
-function validimiRegister(){
+   slides[slideIndex-1].style.display = "block";  
+ }
 
-const name = document.getElementById("name").value;
-const email = document.getElementById("email").value;
-const phone = document.getElementById("phone").value;
-const password = document.getElementById("password").value;
+// console.log("Hello")
+let NameRegex = /^[A-Z][a-z]{3,8}$/;
+let EmailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
 
-if(name === ""){
-  alert("Ju lutem vendosni emri tuaj");
-  return false;
-}
+function validimiRegister() {
 
-if(email==="" || !email.includes("@")){
-  alert("Ju lutem vendosni nje email valide");
-  return false;
-}
+  const name = document.getElementById("name").value;
+  const nameError = document.getElementById("nameerror");
 
-if(phone===|"" || isNaN(phone)){
-  alert("ju lutem vendosni nje numer telefoni valid");
-  return false;
-}
+  const email = document.getElementById("email").value;
+  const emailError = document.getElementById("emailerror");
 
-if(password=== ""){
-  alert("ju lutem vendosni nje pasword valid");
-  return false;
+  const phone = document.getElementById("phone").value;
+  const phoneError = document.getElementById("phoneerror");
+
+  const password = document.getElementById("password").value;
+  const passwordError = document.getElementById("passworderror");
+
+  nameError.innerText = '';
+  emailError.innerText = '';
+  phoneError.innerText = '';
+  passwordError.innerText = '';
+
+  if(!NameRegex.test(name) || name === ''){
+    nameError.innerText = 'Invalid name';
+    return;
+  }
+
+  nameError.innerText = '';
+  emailError.innerText = '';
+  phoneError.innerText = '';
+  passwordError.innerText = '';
+
+
+
 }
-return true;
-}
+// console.log("Helolo");
+
+

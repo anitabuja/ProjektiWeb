@@ -1,55 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="plugins/font-awesome-4.7.0 (1)/font-awesome-4.7.0/css/font-awesome.min.css">
     <title>Document</title>
-    <script>
-// Ne rregull e ke rujt regexin n variable mirpo inputat i ke rujt dy her
-//Ni her n let niher n const. Leje veq njanen
-//N fund krahasimin e value t inputave bone me regex jo a osht null a jo
-//qysh mos me bo < if(email === "")>=== ti qitu duhesh me krahasu me regex
-      /*  function validimiRegister(){
 
-        let NameRegex = /^[A-Z][a-z]{3,8}$/;
-        let EmailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
-        let PasswordRegex = /
-
-         let NameInput = document.getElementById('Name');
-         let EmailInput = document.getElementById('Email');
-         let Password = document.getElementById('Password');
-         
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const phone = document.getElementById("phone").value;
-      const password = document.getElementById("password").value;
-
-      if(name === ""){
-        alert("Ju lutem vendosni emri tuaj");
-        return false;
-      }
-
-      if(email==="" || !email.includes("@")){
-        alert("Ju lutem vendosni nje email valide");
-        return false;
-      }
-
-      if(phone===|"" || isNaN(phone)){
-        alert("ju lutem vendosni nje numer telefoni valid");
-        return false;
-      }
-
-      if(password=== ""){
-        alert("ju lutem vendosni nje pasword valid");
-        return false;
-      }
-      return true;
-    }
-     
-    </script>
 </head>
+
 <body>
     <nav class="underline_nav">
         <input id="nav-toggle" type="checkbox">
@@ -74,36 +34,37 @@
             <div class="line"></div>
         </label>
     </nav>
-    
-
-
- 
 
     <section class="Register_section">
         <div class="container">
             <div class="boxes">
                 <div class="registerft">
-                    <img src="img/register-now-speech-bubble-banner-with-register-now-text-glassmorphism-style-business-marketing-advertising-vector-isolated-background-eps-10_399089-3544.avif" alt="Login foto">
+                    <img src="img/register-now-speech-bubble-banner-with-register-now-text-glassmorphism-style-business-marketing-advertising-vector-isolated-background-eps-10_399089-3544.avif"
+                        alt="Login foto">
                 </div>
                 <div class="registerbox">
 
                     <h2>Register</h2>
-                    <form class="registerform" onsubmit="return validimiRegister()">
-                        <input id="name" type="text"  placeholder="Name">
+                    <form class="registerform">
+                        <input id="name" type="text" placeholder="Name">
                         <hr>
+                        <div class="inputerror" id="nameerror"></div>
                         <input id="email" type="email" placeholder="Email">
                         <hr>
-                        <input id="phone" type="tel"  placeholder="Phone">
+                        <div class="inputerror" id="emailerror"></div>
+                        <input id="phone" type="tel" placeholder="Phone">
                         <hr>
-                        <input id="password" type="password"  placeholder="Password">
+                        <div class="inputerror" id="phoneerror"></div>
+                        <input id="password" type="password" placeholder="Password">
                         <hr>
+                        <div class="inputerror" id="passworderror"></div>
                     </form>
                     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-                    
 
-                        <div class="loginbuton">
-                            <button type="submit">Register</button>
-                        </div>
+
+                    <div class="loginbuton">
+                        <button onclick="return validimiRegister()" type="submit">Register</button>
+                    </div>
                     </form>
                 </div>
             </div>
@@ -118,76 +79,78 @@
                     <input type="text" placeholder="Your email">
                     <button class="end-btn"><i class="fa fa-chevron-right"></i></button>
                 </form>
-               
-            </div>
-            </div>
-                <div class="navigation">
-                    
-                <ul>
 
-                    <li>
-                        <a class="active" href="#">
-                            Home
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="store.html">
-                            Store
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#">
-                            About us
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#">
-                            Contact Us
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#">
-                            Register    
-                        </a>
-                    </li>
-                    <li>
-                        <a href="login.html">
-                            Login  
-                        </a>
-                </ul>     
-                </div>
-                
-           
-            </div>
-            
-
-            <div class="footeric">
-                <div class="footericon">
-                    <a href="www.facebook.com">
-                        <img src="img/facebook.png" alt="facebook" >
-                    </a>
-                </div>
-                <div class="footericon">
-                   <a href="www.twwiter.com">
-                    <img src="img/Path.png" alt="twwiter">
-                </a>
-                </div>
-                <div class="footericon">
-                   <a href="www.youtube.com">
-                    <img src="img/Shape.png" alt="youtube">
-                   </a>
-                </div>
-            </div>
-        
-            <div class="footerc">
-                <p>© Copyright 2023 - <Label> Lift Media</Label></p>
             </div>
         </div>
-    </section>
-    <script src="./script/script.js"></script>
+        <div class="navigation">
+
+            <ul>
+
+                <li>
+                    <a class="active" href="#">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="store.html">
+                        Store
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        About us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Register
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        Login
+                    </a>
+            </ul>
+        </div>
+
+
+        </div>
+
+
+        <div class="footeric">
+            <div class="footericon">
+                <a href="www.facebook.com">
+                    <img src="img/facebook.png" alt="facebook">
+                </a>
+            </div>
+            <div class="footericon">
+                <a href="www.twwiter.com">
+                    <img src="img/Path.png" alt="twwiter">
+                </a>
+            </div>
+            <div class="footericon">
+                <a href="www.youtube.com">
+                    <img src="img/Shape.png" alt="youtube">
+                </a>
+            </div>
+        </div>
+
+        <div class="footerc">
+            <p>© Copyright 2023 - <Label> Lift Media</Label></p>
+        </div>
+        </div>
+    </section> <script src="./script/script.js"></script>
+  
+  
 </body>
+
 </html>
