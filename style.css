@@ -41,7 +41,7 @@ body {
   width: 300px;
   padding: 8px;
   background-color: #ffdfdf;
- margin-bottom: 15px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
 }
@@ -64,12 +64,11 @@ body {
   color: black;
 }
 
-
-nav .logo a{
-  color: black ;
+nav .logo a {
+  color: black;
   text-decoration: none;
 }
-nav .logo a:hover{
+nav .logo a:hover {
   color: #272a2d !important;
   text-decoration: none;
 }
@@ -85,58 +84,56 @@ nav {
 }
 nav .logo {
   float: left;
-   width: 40%;
+  width: 40%;
   height: 100%;
   display: flex;
   align-items: center;
   font-size: 24px;
   color: #f5cb5c !important;
   text-decoration: none;
-  
 }
-nav .logo strong{
+nav .logo strong {
   margin-left: 6px;
 }
 nav .links {
-    float: right;
-    padding: 0;
-    margin: 0;
-    width: 60%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 nav .links li {
-    list-style: none;
+  list-style: none;
 }
 nav .links a {
-    display: block;
-    padding: 1em;
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
+  display: block;
+  padding: 1em;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
 }
 #nav-toggle {
-    position: absolute;
-    top: -100px;
+  position: absolute;
+  top: -100px;
 }
 nav .icon-burger {
-    display: none;
-    position: absolute;
-    right: 5%;
-    top: 5%;
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 5%;
 }
 nav .icon-burger .line {
-    width: 30px;
-    height: 5px;
-    background-color: #f36ba1;
-    margin: 5px;
-    border-radius: 3px;
-    transition: all .3s ease-in-out;
+  width: 30px;
+  height: 5px;
+  background-color: #f36ba1;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
 }
-
 
 nav.underline_nav ul li a {
   position: relative;
@@ -148,7 +145,7 @@ nav.underline_nav ul li a:after {
   right: 0;
   margin: auto;
   width: 0%;
-  content: '.';
+  content: ".";
   color: transparent;
   background: #aaa;
   height: 1px;
@@ -156,8 +153,6 @@ nav.underline_nav ul li a:after {
 nav.underline_nav ul li a:hover:after {
   width: 100%;
 }
-
-
 
 /* .menu {
   display: flex;
@@ -243,7 +238,8 @@ nav.underline_nav ul li a:hover:after {
 }
 
 .homebanner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/bannerfoto.jfif);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/bannerfoto.jfif);
   position: relative;
   background-repeat: no-repeat;
   width: 100%;
@@ -635,34 +631,29 @@ hr {
   width: 100%;
 }
 
-.contactusbanner{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/contactus.jpg);
-position: relative;
-background-repeat: no-repeat;
-width: 100%;
-height: 400px;
-background-position: center;
-background-size: cover;
-background-attachment: fixed;
+.contactusbanner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/contactus.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-
-
-.links a.active{
+.links a.active {
   color: #ba2e66;
 }
 
-fieldset{
+fieldset {
   padding: 30px;
   margin-top: 50px;
   border-color: #aa045f;
 }
 
-
-
-
 @media screen and (max-width: 768px) {
-
   nav .logo {
     float: none;
     width: auto;
@@ -680,10 +671,10 @@ fieldset{
     height: auto;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0, 0, 0, 0.9);
     overflow: hidden;
     box-sizing: border-box;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   nav .links a {
     font-size: 20px;
@@ -693,7 +684,7 @@ fieldset{
   nav :checked ~ .links {
     bottom: 0%;
   }
-  .nav .icon-burger .line{
+  .nav .icon-burger .line {
     background-color: #f36ba1 !important;
   }
   nav .icon-burger {
@@ -703,7 +694,7 @@ fieldset{
     transform: translateY(10px) rotate(225deg);
   }
   nav :checked ~ .icon-burger .line:nth-child(3) {
-    transform: translateY(-10px) rotate(-225deg); 
+    transform: translateY(-10px) rotate(-225deg);
   }
   nav :checked ~ .icon-burger .line:nth-child(2) {
     opacity: 0;
@@ -757,7 +748,6 @@ fieldset{
   .container {
     width: 90%;
   }
-  
 
   .abboxes {
     grid-template-columns: auto;
@@ -837,6 +827,14 @@ fieldset{
     height: auto;
   }
 
+  .ct_form input {
+    width: 100%;
+  }
+
+  .ct_form textarea {
+    width: 100%;
+  }
+
   .storebanner {
     height: 300px;
   }
@@ -862,83 +860,76 @@ fieldset{
   .slider {
     width: unset;
   }
-
-  }
-  
-  
-  input[type=text].register_email , input[type=password].register_email {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-  
-  input[type=text]:focus.register_email, input[type=password]:focus.register_email {
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  
-  hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 10px;
-  }
-
-  .inputerror{
-    color: red;
-    font-weight: bold;
-    margin-bottom: 15px;
 }
-  
-  
- 
-  .registerbtn {
-    background-color: #aa045f;
-    color: white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-  }
-  
 
-  .registerft img{
-    height: 100%;
-    width: 100%;
-    
-  }
+input[type="text"].register_email,
+input[type="password"].register_email {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
 
-  .registerbox{
-    margin-left: 30px;
-    padding: 20px;
-  }  
+input[type="text"]:focus.register_email,
+input[type="password"]:focus.register_email {
+  background-color: #ddd;
+  outline: none;
+}
 
-  .registerform input{
-    border: none;
-    padding: 5px;
-    background-color:  #ffdfdf;
-    outline: none;
-  }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 10px;
+}
 
-  hr{
-    margin-top: 5px;
-    height: 2px;
-    background-color:purple;
-    border: none;
-  }
+.inputerror {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
 
-  .registerbox h2{
-    margin-bottom: 30px;
-  }
- 
+.registerbtn {
+  background-color: #aa045f;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
 
-  
-  .Registersection {
-    padding-left: 0;
-    padding-right: 0;
-  }
- 
+.registerft img {
+  height: 100%;
+  width: 100%;
+}
+
+.registerbox {
+  margin-left: 30px;
+  padding: 20px;
+}
+
+.registerform input {
+  border: none;
+  padding: 5px;
+  background-color: #ffdfdf;
+  outline: none;
+  width: 100%;
+}
+
+hr {
+  margin-top: 5px;
+  height: 2px;
+  background-color: purple;
+  border: none;
+}
+
+.registerbox h2 {
+  margin-bottom: 30px;
+}
+
+.Registersection {
+  padding-left: 0;
+  padding-right: 0;
+}

@@ -10,6 +10,51 @@ function validimiLogin() {
     return true;
 }
 
+const nameRegex = /^[a-zA-Z\s]+$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRegex = /^(044|045|046|049|048|043)\d{5}\d$/;
+const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; //Minimum eight characters, at least one letter and one number
+
+function validateInput(fieldId, regex, errorId) {
+  const fieldValue = document.getElementById(fieldId).value;
+  const errorElement = document.getElementById(errorId);
+
+  errorElement.innerText = '';
+
+  if (!regex.test(fieldValue) || fieldValue === '') {
+    errorElement.innerText = `Invalid ${fieldId}`;
+  }
+}
+
+function validimiRegister() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const password = document.getElementById("password").value;
+
+
+  if (!nameRegex.test(name) || name === '') {
+    document.getElementById("nameerror").innerText = 'Invalid name';
+    return false;
+  }
+
+  if (!emailRegex.test(email) || email === '') {
+    document.getElementById("emailerror").innerText = 'Invalid email';
+    return false;
+  }
+
+  if (!phoneRegex.test(phone) || phone === '') {
+    document.getElementById("phoneerror").innerText = 'Invalid phone number';
+    return false;
+  }
+
+  if (!passwordRegex.test(password) || password === '') {
+    document.getElementById("passworderror").innerText = 'Invalid password';
+    return false;
+  }
+
+  return true;
+}
 let slideIndex = 1; 
 
 showSlides(slideIndex);
@@ -26,6 +71,10 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slide_img");
 
+  if (slides.length === 0) { 
+    return;
+  }
+
   if (n > slides.length) {slideIndex = 1} 
   
   if (n < 1) {slideIndex = slides.length} 
@@ -38,43 +87,5 @@ function showSlides(n) {
 
    slides[slideIndex-1].style.display = "block";  
  }
-
-// console.log("Hello")
-let NameRegex = /^[A-Z][a-z]{3,8}$/;
-let EmailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
-
-function validimiRegister() {
-
-  const name = document.getElementById("name").value;
-  const nameError = document.getElementById("nameerror");
-
-  const email = document.getElementById("email").value;
-  const emailError = document.getElementById("emailerror");
-
-  const phone = document.getElementById("phone").value;
-  const phoneError = document.getElementById("phoneerror");
-
-  const password = document.getElementById("password").value;
-  const passwordError = document.getElementById("passworderror");
-
-  nameError.innerText = '';
-  emailError.innerText = '';
-  phoneError.innerText = '';
-  passwordError.innerText = '';
-
-  if(!NameRegex.test(name) || name === ''){
-    nameError.innerText = 'Invalid name';
-    return;
-  }
-
-  nameError.innerText = '';
-  emailError.innerText = '';
-  phoneError.innerText = '';
-  passwordError.innerText = '';
-
-
-
-}
-// console.log("Helolo");
 
 

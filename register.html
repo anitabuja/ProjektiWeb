@@ -45,17 +45,21 @@
                 <div class="registerbox">
 
                     <h2>Register</h2>
-                    <form class="registerform">
-                        <input id="name" type="text" placeholder="Name">
+                    <form class="registerform" onsubmit="return validimiRegister()">
+                        <input id="name" type="text" placeholder="Name"
+                            oninput="validateInput('name', nameRegex, 'nameerror')" required>
                         <hr>
                         <div class="inputerror" id="nameerror"></div>
-                        <input id="email" type="email" placeholder="Email">
+                        <input id="email" type="email" placeholder="Email"
+                            oninput="validateInput('email', emailRegex, 'emailerror')" required>
                         <hr>
                         <div class="inputerror" id="emailerror"></div>
-                        <input id="phone" type="tel" placeholder="Phone">
+                        <input id="phone" type="tel" placeholder="Phone"
+                            oninput="validateInput('phone', phoneRegex, 'phoneerror')" required>
                         <hr>
                         <div class="inputerror" id="phoneerror"></div>
-                        <input id="password" type="password" placeholder="Password">
+                        <input id="password" type="password" placeholder="Password"
+                            oninput="validateInput('password', passwordRegex, 'passworderror')" required>
                         <hr>
                         <div class="inputerror" id="passworderror"></div>
                     </form>
@@ -63,7 +67,7 @@
 
 
                     <div class="loginbuton">
-                        <button onclick="return validimiRegister()" type="submit">Register</button>
+                        <button type="submit">Register</button>
                     </div>
                     </form>
                 </div>
@@ -145,12 +149,13 @@
         </div>
 
         <div class="footerc">
-            <p>© Copyright 2023 - <Label> Lift Media</Label></p>
+            <p>© Copyright 2023 - <Label> Apple Store</Label></p>
         </div>
         </div>
-    </section> <script src="./script/script.js"></script>
-  
-  
+    </section>
+    <script src="./script/script.js"></script>
+
+
 </body>
 
 </html>
