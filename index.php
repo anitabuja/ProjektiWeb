@@ -1,82 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="plugins/font-awesome-4.7.0 (1)/font-awesome-4.7.0/css/font-awesome.min.css">
-    <title>Home</title>
-</head>
-<body>
-    <!-- <div class="menu">
-        <div class="logo">
-            <img src="img/logoa-removebg-preview.png" alt="Apple logo">
-        </div>
-        <div class="linku">
-            <ul>
+<?php
+include 'header.php';
+include 'db_connection.php';
+?>
 
-                <li>
-                    <a class="active" href="index.html">
-                        Home
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="store.html">
-                        Store
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="aboutus.html">
-                        About us
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="contactus.html">
-                        Contact Us
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="register.html">
-                        Register    
-                    </a>
-                </li>
-                <li>
-                    <a href="login.html">
-                        Login  
-                    </a>
-            </ul>
-        </div>
-
-
-    </div> -->
-
-    <nav class="underline_nav">
-        <input id="nav-toggle" type="checkbox">
-        <a href="index.html">
-            <div class="logo">
-                <img src="img/logoa-removebg-preview.png" alt="Apple logo">
-            </div>
-        </a>
-        <ul class="links">
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="store.html">Store</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-
-
-        <label for="nav-toggle" class="icon-burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </label>
-    </nav>
+   
 
     <section class="Homesection">
         <div class="container">
@@ -250,83 +177,7 @@
         </div>
     </section>
 
-    <section class="footer_section">
-        <div class="container">
-            <div class="fcontent">
-                <h2>NEWSLETTER</h2>
-                <form class="newsletter_form">
-                    <input type="text" placeholder="Your email">
-                    <button class="end-btn"><i class="fa fa-chevron-right"></i></button>
-                </form>
-               
-            </div>
-            </div>
-                <div class="navigation">
-                    
-                <ul>
-
-                    <li>
-                        <a class="active" href="#">
-                            Home
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="store.html">
-                            Store
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#">
-                            About us
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#">
-                            Contact Us
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="#">
-                            Register    
-                        </a>
-                    </li>
-                    <li>
-                        <a href="login.html">
-                            Login  
-                        </a>
-                </ul>     
-                </div>
-                
-           
-            </div>
-            
-
-            <div class="footeric">
-                <div class="footericon">
-                    <a href="www.facebook.com">
-                        <img src="img/facebook.png" alt="facebook" >
-                    </a>
-                </div>
-                <div class="footericon">
-                   <a href="www.twwiter.com">
-                    <img src="img/Path.png" alt="twwiter">
-                </a>
-                </div>
-                <div class="footericon">
-                   <a href="www.youtube.com">
-                    <img src="img/Shape.png" alt="youtube">
-                   </a>
-                </div>
-            </div>
-
-            <div class="footerc">
-                <p>© Copyright 2023 - <Label> Apple Store</Label></p>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
+   <?php 
+   include 'footer.php';
+   
+   ?>

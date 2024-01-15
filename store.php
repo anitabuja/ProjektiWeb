@@ -1,39 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
+ include 'header.php';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="plugins/font-awesome-4.7.0 (1)/font-awesome-4.7.0/css/font-awesome.min.css">
-</head>
+?>
 
-<body>
-
-    <nav class="underline_nav">
-        <input id="nav-toggle" type="checkbox">
-        <a href="index.html">
-            <div class="logo">
-                <img src="img/logoa-removebg-preview.png" alt="Apple logo">
-            </div>
-        </a>
-        <ul class="links">
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="store.html">Store</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-
-
-        <label for="nav-toggle" class="icon-burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </label>
-    </nav>
 
     <section class="productssection">
         <div class="storebanner">
