@@ -933,3 +933,24 @@ hr {
   padding-left: 0;
   padding-right: 0;
 }
+
+
+.image_table img{
+  width: 100px;
+  height: 100px;
+}
+
+.all_products_table{
+  width: 100%;
+  text-align: center;
+}
+
+
+.all_products_table tr:nth-child(even){background-color: #f2f2f2;}
+
+.all_products_table tr:hover {background-color: #ddd;}
+
+.all_products_table td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
