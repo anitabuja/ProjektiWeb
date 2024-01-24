@@ -6,11 +6,17 @@ include 'adminheader.php';
 $query = "SELECT * FROM produktet";
 $result = $conn->query($query); 
 
+if(isset($_POST ['delete_product'])){
+    $productid = $_POST['delete_product'];
+    $delete_query = "delete from produktet where id='$productid'";
+    $query_run = mysqli_query($conn, $delete_query);
+}
+
 $conn->close();
 
 
 ?>
-<!-- INVENTORY -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,9 +60,9 @@ $conn->close();
                                 <img src="<?php echo $imagePath; ?>" alt="" />
                            
                         </td>
-                        <td><button type="button" onclick="window.location= $base_url='edit_cars_admin.php?id=<?php echo $row['id']; ?>';" class="edit_car">Edit</button></td>
+                        <td><button type="button" onclick="window.location= 'http://localhost:8008/ProjektiWeb/admin/edit_product.php?id=<?php echo $row['id']; ?>';" class="edit_product">Edit</button></td>
                         <form id="delete-form" action="" method="post">
-                            <input type="hidden" name="delete_car" value="<?php echo $row['id']; ?>">
+                            <input type="hidden" name="delete_product" value="<?php echo $row['id']; ?>">
                             <td class="delete_btn"><button type="submit">Delete</button></td>
                         </form>
 

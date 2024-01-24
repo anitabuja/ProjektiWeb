@@ -1,5 +1,36 @@
 <?php 
  include 'header.php';
+ include 'db_connection.php';
+ session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+
+    $stmt = mysqli_prepare($conn, "SELECT id, password FROM useri WHERE email = ?");
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+
+
+    if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+        if (password_verify($password, $row['password'])) {
+            $_SESSION['logged_in'] = true;
+          
+            header("location: store.php");
+            exit;
+        } else {
+            $error = "Your Login Name or Password is invalid";
+        }
+    } else {
+        $error = "Your Login Name or Password is invalid";
+    }
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
+}
 
 ?>
 
@@ -12,9 +43,9 @@
                 </div>
                 <div class="box">
                     <h2>Welcome back!</h2>
-                    <form class="loginform" onsubmit="return validimiLogin()">
-                        <input id="email" type="email" placeholder="Your email" >
-                        <input id="password" type="password" placeholder="Your password">
+                    <form method="post" class="loginform" onsubmit="return validimiLogin()">
+                        <input name="email" id="email" type="email" placeholder="Your email" >
+                        <input name="password" id="password" type="password" placeholder="Your password">
                         <div class="loginbuton">
                             <button type="submit">Login</button>
                         </div>

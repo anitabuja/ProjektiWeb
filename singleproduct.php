@@ -1,25 +1,27 @@
 <?php 
  include 'header.php';
+ include 'db_connection.php';
+
+ $post_id = $_GET['id'];
+
+ $sql = "SELECT * FROM produktet WHERE id=$post_id";
+ $result = mysqli_query($conn, $sql);
 
 ?>
 
 
     <section class="singleproduct_section">
         <div class="container">
-
+        <?php
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+        ?>
             <div class="singleproduct_stuf">
                 <div class="slider">
                     <div class="singleproduct_ph slide_img">
-                        <img src="img/iphone-removebg-preview.png" alt="iphone">
+                        <img src="./admin/images/<?php echo $row['image'];?>" alt="iphone">
                     </div>
-                    <div class="singleproduct_ph slide_img">
-                        <img src="img/ipppphoneee-removebg-preview.png" alt="iphone">
-                    </div>
-                    <div class="singleproduct_ph slide_img">
-                        <img src="img/iphone-removebg-preview.png" alt="iphone">
-                    </div>
-                    <a class="prev" onclick="plusSlides(-1)">❮</a>
-                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    
                 </div>
 
 
@@ -28,33 +30,33 @@
 
                 <div class="singleproductconbox">
                     <div class="singlecon">
-                        <h1>iPhone 14 Pro Max - Pink</h1>
+                        <h1><?php echo $row['titulli'];?></h1>
                     </div>
 
                     <div class="singleproduct_con">
                         <p class="sncon">Price</p>
-                        <span class="spcon">$1200.00</span>
-
+                        <span class="spcon"><?php echo $row['qmimi'];?>€</span>
+                        
                     </div>
                     <hr>
 
                     <div class="singleproduct_con">
                         <p class="sncon">Color</p>
-                        <span class="spcon">Pink</span>
+                        <span class="spcon"><?php echo $row['ngjyra'];?></span>
 
                     </div>
                     <hr>
 
                     <div class="singleproduct_con">
                         <p class="sncon">Apple Case</p>
-                        <span class="spcon">Included</span>
+                        <span class="spcon"><?php echo $row['applecase'];?></span>
 
                     </div>
                     <hr>
 
                     <div class="singleproduct_con">
                         <p class="sncon">Smart Case</p>
-                        <span class="spcon">Included</span>
+                        <span class="spcon"><?php echo $row['smartcase'];?></span>
                     </div>
                     <hr>
 
@@ -67,7 +69,8 @@
 
 
             </div>
-
+            <?php }
+    } ?>
         </div>
     </section>
 

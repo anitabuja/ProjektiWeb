@@ -5,8 +5,13 @@ include 'adminheader.php';
 
 $query = "SELECT * FROM contact";
 $result = $conn->query($query); 
+
+
+
 if(isset($_POST ['delete_contact'])){
-    $contactid = $_POST['delete_contact']
+    $contactid = $_POST['delete_contact'];
+    $delete_query = "delete from contact where id='$contactid'";
+    $query_run = mysqli_query($conn, $delete_query);
 }
 $conn->close();
 
@@ -35,7 +40,7 @@ $conn->close();
                     <tr>
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['name']; ?></td>
-                        <td><?php echo $row['email']; ?>€   </td>
+                        <td><?php echo $row['email']; ?> </td>
                         <td><?php echo $row['subject']; ?></td>
                         <td><?php echo $row['message']; ?></td>
                        

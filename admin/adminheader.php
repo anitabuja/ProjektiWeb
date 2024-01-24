@@ -18,7 +18,7 @@
             </div>
         </a>
         <ul class="links">
-            <li><a class="active" href="all_products.php">All Product</a></li>
+            <li><a class="active" href="all_products.php">all Product</a></li>
             <li><a href="add_product.php">add Product</a></li>
             <li><a href="contactadmin.php">all contacts</a></li>
         </ul>

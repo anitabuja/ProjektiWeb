@@ -1,5 +1,12 @@
 <?php 
  include 'header.php';
+ include 'db_connection.php';
+
+ $query = "SELECT * FROM produktet ORDER BY id desc" ;
+ $result = $conn->query($query); 
+
+
+
 
 ?>
 
@@ -11,63 +18,28 @@
         <div class="container">
 
             <div class="productboxes">
+            <?php 
 
+             while($rows=mysqli_fetch_assoc($result)){
+             ?>
                 <div class="productbox">
-                    <a href="singleproduct.html">
-                        <img src="img/iphone-removebg-preview.png" alt="iphone photo">
+              
+                    <a href="singleproduct.php?id=<?php echo $rows['id'];?>">
+                        <img src="./admin/images/<?php echo $rows["image"]; ?>" alt="iphone photo">
                         <p class="pinkp">Free Engraving</p>
-                        <p class="prodsn">iPhone 14 Pro Max - Pink</p>
-                        <p class="price">$1200.00</p>
-
+                        <p class="prodsn"><?php echo $rows["titulli"]; ?></p>
+                        <p class="price"><?php echo $rows["qmimi"]; ?>€</p>
+                        
                     </a>
 
-                </div>
-                <div class="productbox">
-                    <a href="singleproduct.html">
-                        <img src="img/headphones-removebg-preview.png" alt="headphones photo">
-                        <p class="pinkp">Free Engraving</p>
-                        <p class="prodsn">AirPods Max - Pink</p>
-                        <p class="price">$549.00</p>
-                    </a>
+                   
 
                 </div>
-                <div class="productbox">
-                    <a href="singleproduct.html">
-                        <img src="img/macbok-removebg-preview.png" alt="macbook photo">
-                        <p class="pinkp">Free Engraving</p>
-                        <p class="prodsn">Macbook Air - Pink</p>
-                        <p class="price">$2500.00</p>
-                    </a>
+                <?php 
+               }
 
-                </div>
-                <div class="productbox">
-                    <a href="singleproduct.html">
-                        <img src="img/airpods-removebg-preview.png" alt="macbook photo">
-                        <p class="pinkp">Free Engraving</p>
-                        <p class="prodsn">Airpods</p>
-                        <p class="price">$100.00</p>
-                    </a>
-
-                </div>
-                <div class="productbox">
-                    <a href="singleproduct.html">
-                        <img src="img/applewhatch-removebg-preview.png" alt="macbook photo">
-                        <p class="pinkp">Free Engraving</p>
-                        <p class="prodsn">Apple watch</p>
-                        <p class="price">$500.00</p>
-                    </a>
-
-                </div>
-                <div class="productbox">
-                    <a href="singleproduct.html">
-                        <img src="img/ipad-removebg-preview.png" alt="macbook photo">
-                        <p class="pinkp">Free Engraving</p>
-                        <p class="prodsn">iPad Pro</p>
-                        <p class="price">$1500.00</p>
-                    </a>
-
-                </div>
-
+                ?>
+              
             </div>
         </div>
     </section>

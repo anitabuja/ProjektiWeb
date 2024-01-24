@@ -14,29 +14,33 @@
                 <div class="registerbox">
 
                     <h2>Register</h2>
-                    <form class="registerform" onsubmit="return validimiRegister()">
-                        <input id="name" type="text" placeholder="Name"
+                    <form method="post" action="register_data.php" class="registerform"  onsubmit="return validimiRegister()">
+                        <input name="name" id="name" type="text" placeholder="Name"
                             oninput="validateInput('name', nameRegex, 'nameerror')" required>
                         <hr>
                         <div class="inputerror" id="nameerror"></div>
-                        <input id="email" type="email" placeholder="Email"
+                        <input name="email" id="email" type="email" placeholder="Email"
                             oninput="validateInput('email', emailRegex, 'emailerror')" required>
                         <hr>
                         <div class="inputerror" id="emailerror"></div>
-                        <input id="phone" type="tel" placeholder="Phone"
+                        <input name="phone" id="phone" type="tel" placeholder="Phone"
                             oninput="validateInput('phone', phoneRegex, 'phoneerror')" required>
                         <hr>
                         <div class="inputerror" id="phoneerror"></div>
-                        <input id="password" type="password" placeholder="Password"
+                        <input name="password" id="password" type="password" placeholder="Password"
                             oninput="validateInput('password', passwordRegex, 'passworderror')" required>
                         <hr>
                         <div class="inputerror" id="passworderror"></div>
-                    </form>
+
+                        <input name="password_confirm" id="confirm_password" type="password" placeholder="Confirm Password">
+                        <hr>
+                        <div id="confirmPass_error">Please check your password again</div>
+                  
                     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
 
                     <div class="loginbuton">
-                        <button type="submit">Register</button>
+                        <button name="register_buton" type="submit">Register</button>
                     </div>
                     </form>
                 </div>
