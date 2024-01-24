@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../db_connection.php';
-
+include 'adminheader.php';
 
 $query = "SELECT * FROM produktet";
 $result = $conn->query($query); 

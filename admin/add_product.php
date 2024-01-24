@@ -1,5 +1,6 @@
 <?php 
 include '../db_connection.php';
+include 'adminheader.php';
 
 if(isset($_POST['add_product'])){
     $title = $_POST['title'];

@@ -1,6 +1,20 @@
 <?php 
  include 'header.php';
+ include 'db_connection.php';
 
+
+ if(isset($_POST['submit_contact'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    
+
+    $query = mysqli_query($conn, "INSERT INTO contact (name, email, subject, message) 
+    VALUES ('$name', '$email', '$subject', '$message')");
+    }
+
+ 
 ?>
 
 
@@ -63,13 +77,13 @@
     
                     </div>
 
-                    <form class="ct_form">
-                        <input type="text" placeholder="Your Name">
-                        <input type="email" placeholder="Your Email">
-                        <input type="text" placeholder="Subject">
-                       <textarea name="" placeholder="Your Message..." cols="10" rows="5"></textarea>
+                    <form class="ct_form" method="post">
+                        <input type="text" placeholder="Your Name" name = 'name'>
+                        <input type="email" placeholder="Your Email" name = 'email'>
+                        <input type="text" placeholder="Subject" name = 'subject'>
+                       <textarea  placeholder="Your Message..." cols="10" rows="5" name="message"></textarea>
                        <div class="ctformbutton">
-                        <button type="submit">Send</button>
+                       <button name="submit_contact" type="submit">Send</button>
                        </div> 
                     </form>  
                 
