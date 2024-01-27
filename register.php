@@ -40,7 +40,7 @@
 
 
                     <div class="loginbuton">
-                        <button name="register_button" type="submit">Register</button>
+                        <button name="register_buton" type="submit">Register</button>
                     </div>
                     </form>
                 </div>
