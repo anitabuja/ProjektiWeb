@@ -2,6 +2,11 @@
 include '../db_connection.php';
 include 'adminheader.php';
 
+// if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+//     header("Location: admin_index.php");
+//     exit;
+// }
+
 if(isset($_POST['add_product'])){
     $title = $_POST['title'];
     $qmimi = $_POST['qmimi'];
@@ -24,25 +29,21 @@ if(isset($_POST['add_product'])){
 
 $conn->close();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 
-<form class="ct_form" method="post" enctype="multipart/form-data">
-    <input type="text" placeholder="Your Product Name" name="title">
-    <input type="number" placeholder="qmimi" name="qmimi">
-    <input type="text" placeholder="ngjyra" name="ngjyra">
-    <input type="text" placeholder="applecase" name="applecase">
-    <input type="text" placeholder="smartcase" name="smartcase">
-    <input type="file" name="image">
-    <div class="ctformbutton">
-    <button name="add_product" type="submit">Send</button>
-    </div> 
-</form>  
+<div class="container">
+    <form class="ct_form" method="post" enctype="multipart/form-data">
+        <input type="text" placeholder="Your Product Name" name="title">
+        <input type="number" placeholder="Price" name="qmimi">
+        <input type="text" placeholder="Color" name="ngjyra">
+        <input type="text" placeholder="Apple Case" name="applecase">
+        <input type="text" placeholder="Smart Case" name="smartcase">
+        <input type="file" name="image">
+        <div class="ctformbutton">
+            <button name="add_product" type="submit">Add Product</button>
+        </div>
+    </form>
+</div>
+
 </body>
+
 </html>

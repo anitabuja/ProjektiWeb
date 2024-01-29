@@ -55,6 +55,8 @@ function validimiRegister() {
 
   return true;
 }
+
+//------------------------------------------------------------------------------ SLIDERRRRRRRRRRRRRRRRRRRR
 let slideIndex = 1; 
 
 showSlides(slideIndex);

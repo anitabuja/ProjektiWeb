@@ -21,7 +21,19 @@ include 'db_connection.php';
                 </div>
 
                 <div class="homelogo">
-                    <img src="img/2023-Apple-Products.jpg" alt="Devices logo">
+                <div class="slider">
+                    <div class="singleproduct_ph slide_img">
+                        <img src="img/banner_apple 1.png" alt="iphone">
+                    </div>
+                    <div class="singleproduct_ph slide_img">
+                        <img src="img/ipppphoneee-removebg-preview.png" alt="iphone">
+                    </div>
+                    <div class="singleproduct_ph slide_img">
+                        <img src="img/iphone-removebg-preview.png" alt="iphone">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
                 </div>
                 
                 
@@ -176,7 +188,7 @@ include 'db_connection.php';
             </form>  
         </div>
     </section>
-
+   <script src= "./script/script.js"></script>
    <?php 
    include 'footer.php';
    

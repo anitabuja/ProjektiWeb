@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +22,16 @@
             <li><a href="store.php">Store</a></li>
             <li><a href="aboutus.php">About Us</a></li>
             <li><a href="contactus.php">Contact Us</a></li>
-            <li><a href="register.php">Register</a></li>
-            <li><a href="login.php">Login</a></li>
+            <?php
+                
+            if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+                echo '<li><a href="logout.php">Logout</a></li>';
+            } else {
+                echo '<li><a href="register.php">Register</a></li>';
+                echo '<li><a href="login.php">Login</a></li>';
+                
+            }
+            ?>
         </ul>
 
 

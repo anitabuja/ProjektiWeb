@@ -1,14 +1,15 @@
-<?php 
- include 'header.php';
- include 'db_connection.php';
- session_start();
+<?php
+include 'header.php';
+include 'db_connection.php';
+
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+    // username and password sent from form 
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-    $stmt = mysqli_prepare($conn, "SELECT id, password FROM useri WHERE email = ?");
+    $stmt = mysqli_prepare($conn, "SELECT id, password FROM users WHERE email = ?");
     mysqli_stmt_bind_param($stmt, "s", $email);
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
@@ -19,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row['password'])) {
             $_SESSION['logged_in'] = true;
-          
+            // $_SESSION['email'] = $email;
             header("location: store.php");
             exit;
         } else {
@@ -31,9 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
 }
-
 ?>
-
 
     <section class="Login_section">
         <div class="container">
@@ -43,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <div class="box">
                     <h2>Welcome back!</h2>
-                    <form method="post" class="loginform" onsubmit="return validimiLogin()">
+                    <form method="post" class="loginform" name="form" onsubmit="return validimiLogin()">
                         <input name="email" id="email" type="email" placeholder="Your email" >
                         <input name="password" id="password" type="password" placeholder="Your password">
                         <div class="loginbuton">
@@ -55,82 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </section>
 
-    <section class="footer_section">
-        <div class="container">
-            <div class="fcontent">
-                <h2>NEWSLETTER</h2>
-                <form class="newsletter_form">
-                    <input type="text" placeholder="Your email">
-                    <button class="end-btn"><i class="fa fa-chevron-right"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="navigation">
-
-            <ul>
-
-                <li>
-                    <a  href="#">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="store.html">
-                        Store
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        About us
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Contact Us
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Register
-                    </a>
-                </li>
-                <li>
-                    <a href="login.html">
-                        Login
-                    </a>
-            </ul>
-        </div>
-
-
-        </div>
-
-        <div class="footeric">
-            <div class="footericon">
-                <a href="www.facebook.com">
-                    <img src="img/facebook.png" alt="facebook">
-                </a>
-            </div>
-            <div class="footericon">
-                <a href="www.twwiter.com">
-                    <img src="img/Path.png" alt="twwiter">
-                </a>
-            </div>
-            <div class="footericon">
-                <a href="www.youtube.com">
-                    <img src="img/Shape.png" alt="youtube">
-                </a>
-            </div>
-        </div>
-
-        <div class="footerc">
-            <p>© Copyright 2023 - <Label> Apple Store</Label></p>
-        </div>
-        </div>
-    </section>
+<?php include 'footer.php'; ?>
 
 
 
@@ -138,3 +62,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
+
+
+<!-- <div class="login_page">
+    <div class="login_page_banner">
+        <img src="./img/login.jpg" alt=" Login image">
+    </div>
+    <div class="wrapper">
+        <div class="login_box">
+
+
+            <form class="login_form" method="post" name="form" onsubmit="return validated()">
+
+                <div class="input_wrapper">
+                    <h4>Email</h4>
+                    <input autocomplete="off" type="email" name="email">
+                    <div id="email_error_login">Please fill up your Email</div>
+                </div>
+                <div class="input_wrapper">
+                    <h4>Password</h4>
+                    <input type="password" name="password">
+                    <div id="pass_error_login">Please fill up your Password</div>
+                </div>
+
+                <button type="submit" class="login_btn">Login</button>
+                <div class="container signin">
+                    <p>Don't have an account? <a href="./register.php">Register</a>.</p>
+                </div>
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+
+<?php include 'footer.php'; ?>
+</body>
+
+</html> -->
