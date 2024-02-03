@@ -1,7 +1,8 @@
 <?php
-  session_start();
+
 include '../db_connection.php';
- 
+session_start();
+
   
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -25,7 +26,7 @@ include '../db_connection.php';
 		
       if($count == 1) {
         $_SESSION['admin_logged_in'] = true;
-       // $_SESSION['myusername'] = $myusername;
+        $_SESSION['myusername'] = $myusername;
          header("location: all_products.php");
       }else {
          $error = "Your Login Name or Password is invalid";

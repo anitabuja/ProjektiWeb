@@ -1,6 +1,8 @@
 <?php
 include 'header.php';
 include 'db_connection.php';
+$query = "SELECT * FROM produktet ORDER BY id desc limit 3 ";
+$result = $conn->query($query);
 ?>
 
    
@@ -26,10 +28,10 @@ include 'db_connection.php';
                         <img src="img/banner_apple 1.png" alt="iphone">
                     </div>
                     <div class="singleproduct_ph slide_img">
-                        <img src="img/ipppphoneee-removebg-preview.png" alt="iphone">
+                        <img src="img/pinkphone.jpg" alt="iphone">
                     </div>
                     <div class="singleproduct_ph slide_img">
-                        <img src="img/iphone-removebg-preview.png" alt="iphone">
+                        <img src="img/nikewatch.png" alt="iphone">
                     </div>
                     <a class="prev" onclick="plusSlides(-1)">❮</a>
                     <a class="next" onclick="plusSlides(1)">❯</a>
@@ -56,35 +58,28 @@ include 'db_connection.php';
                 <h3>Dashing through your list.</h3>
             </div>
             <div class="productboxes">
-               
-                    <div class="productbox">
-                        <a href="singleproduct.html">
-                            <img src="img/iphone-removebg-preview.png" alt="iphone photo">
-                            <p class="pinkp">Free Engraving</p>
-                            <p>iphone 14 pro-Max - Pink</p>
-                            <p class="price">$1200.00</p>
+            <?php 
 
-                        </a>
+             while($rows=mysqli_fetch_assoc($result)){
+             ?>
+                <div class="productbox">
+              
+                    <a href="singleproduct.php?id=<?php echo $rows['id'];?>">
+                        <img src="./admin/images/<?php echo $rows["image"]; ?>" alt="iphone photo">
+                        <p class="pinkp">Free Engraving</p>
+                        <p class="prodsn"><?php echo $rows["titulli"]; ?></p>
+                        <p class="price"><?php echo $rows["qmimi"]; ?>€</p>
                         
-                    </div>
-                    <div class="productbox">
-                        <a href="singleproduct.html">
-                            <img src="img/headphones-removebg-preview.png" alt="headphones photo">
-                            <p class="pinkp">Free Engraving</p>
-                            <p>AirPods Max - Pink</p>
-                            <p class="price">$549.00</p>
-                        </a>
-                       
-                    </div>
-                    <div class="productbox">
-                        <a href="singleproduct.html">
-                            <img src="img/macbok-removebg-preview.png" alt="macbook photo">
-                            <p class="pinkp">Free Engraving</p>
-                            <p>Macbook - Pink</p>
-                            <p class="price">$2500.00</p>
-                        </a>
-                        
-                    </div>   
+                    </a>
+
+                   
+
+                </div>
+                <?php 
+               }
+
+                ?>
+              
             </div>
         </div>
     </section>

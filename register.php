@@ -1,4 +1,4 @@
-1  <?php include 'header.php'; ?>
+  <?php include 'header.php'; ?>
 
     <section class="Register_section">
         <div class="container">
@@ -18,11 +18,7 @@
                         <input name="email" id="email" type="text" placeholder="Email"
                             oninput="validateInput('email', emailRegex, 'emailerror')" required>
                         <hr>
-                        <div class="inputerror" id="emailerror"></div>
-                        <input name="phone" id="phone" type="tel" placeholder="Phone"
-                            oninput="validateInput('phone', phoneRegex, 'phoneerror')" required>
-                        <hr>
-                        <div class="inputerror" id="phoneerror"></div>
+                       
                         <input name="password" id="password" type="password" placeholder="Password"
                             oninput="validateInput('password', passwordRegex, 'passworderror')" required>
                         <hr>

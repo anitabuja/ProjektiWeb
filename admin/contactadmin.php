@@ -1,12 +1,12 @@
 <?php
-session_start();
-include '../db_connection.php';
 include 'adminheader.php';
+include '../db_connection.php';
 
-// if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-//     header("Location: admin_index.php");
-//     exit;
-// }
+
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    header("Location: admin_index.php");
+    exit;
+}
 
 $query = "SELECT * FROM contact";
 $result = $conn->query($query); 

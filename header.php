@@ -12,7 +12,7 @@
     
 <nav class="underline_nav">
         <input id="nav-toggle" type="checkbox">
-        <a href="index.html">
+        <a href="index.php">
             <div class="logo">
                 <img src="img/logoa-removebg-preview.png" alt="Apple logo">
             </div>

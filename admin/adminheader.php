@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,20 +44,4 @@
         </label>
     </nav>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var links = document.querySelectorAll('.links a');
-
-        links.forEach(function (link) {
-            link.addEventListener('click', function () {
-                // Remove 'active' class from all links
-                links.forEach(function (otherLink) {
-                    otherLink.classList.remove('active');
-                });
-
-                // Add 'active' class to the clicked link
-                link.classList.add('active');
-            });
-        });
-    });
-</script>
+   

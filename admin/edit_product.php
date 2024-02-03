@@ -7,10 +7,10 @@
     include 'adminheader.php';
     $productid = isset($_GET['id']) ? $_GET['id'] : '';
 
-    // if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    //     header("Location: admin_index.php");
-    //     exit;
-    // }
+    if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+        header("Location: admin_index.php");
+        exit;
+    }
 
    
     include '../db_connection.php';
@@ -21,7 +21,7 @@
         $row = mysqli_fetch_array($query_run);
     ?>
 
-    <form  id="edit_form" class="ct_form" action="" method="post" enctype="multipart/form-data">
+    <form  id="edit_form" class="ct_form" action="process_form.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="post_id" value="<?php echo $row['id']; ?>">
         <label for="titulli">Title:</label>
         <input type="text" name="titulli" value="<?php echo $row['titulli']; ?>" placeholder="Product title" required>
@@ -58,37 +58,7 @@
     ?>
 </div>
 
-<script>
 
-    $(document).ready(function() {
-    $('#edit_form').on('submit',function(){
-        // Add text 'loading...' right after clicking on the submit button. 
-        $('.output_message').text('Loading...'); 
-
-        var form = $(this);
-        $.ajax({
-            url: 'process_form.php',
-            method: form.attr('method'),
-            data: form.serialize(),
-            dataType: 'json', // specify the data type as JSON
-            success: function(response){
-                if (response.status == 'success'){
-                    $('.output_message').text(response.message);
-                }
-                else{
-                    $('.output_message').text("Product edited successfully");
-                }
-            },
-            error: function(xhr, textStatus, errorThrown){
-                $('.output_message').text('An error occurred while submitting the form: ' + errorThrown);
-            }
-        });
-
-        // Prevents default submission of the form after clicking on the submit button. 
-        return false;
-    });
-});
-</script>
 
 </body>
 </html>

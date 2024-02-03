@@ -43,10 +43,7 @@ function validimiRegister() {
     return false;
   }
 
-  if (!phoneRegex.test(phone) || phone === '') {
-    document.getElementById("phoneerror").innerText = 'Invalid phone number';
-    return false;
-  }
+  
 
   if (!passwordRegex.test(password) || password === '') {
     document.getElementById("passworderror").innerText = 'Invalid password';

@@ -1,11 +1,11 @@
 <?php
 include 'db_connection.php';
 
-if (isset($_POST['register'])) {
+if (isset($_POST['register_buton'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $confirmpass = $_POST['confirmPassword'];
+    $confirmpass = $_POST['password_confirm'];
 
     if ($password === $confirmpass) {
         $name = mysqli_real_escape_string($conn, $name);

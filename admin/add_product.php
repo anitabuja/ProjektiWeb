@@ -1,11 +1,12 @@
 <?php 
-include '../db_connection.php';
 include 'adminheader.php';
+include '../db_connection.php';
 
-// if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-//     header("Location: admin_index.php");
-//     exit;
-// }
+
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    header("Location: admin_index.php");
+    exit;
+}
 
 if(isset($_POST['add_product'])){
     $title = $_POST['title'];
