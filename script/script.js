@@ -13,7 +13,7 @@ function validimiLogin() {
 const nameRegex = /^[a-zA-Z\s]+$/;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^(044|045|046|049|048|043)\d{5}\d$/;
-const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; //Minimum eight characters, at least one letter and one number
+const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; 
 
 function validateInput(fieldId, regex, errorId) {
   const fieldValue = document.getElementById(fieldId).value;
@@ -56,16 +56,6 @@ function validimiRegister() {
 //------------------------------------------------------------------------------ SLIDERRRRRRRRRRRRRRRRRRRR
 let slideIndex = 1; 
 
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex = slideIndex + n); 
-}
-
-function currentSlide(n) {  
-  showSlides(slideIndex = n);
-}
-
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slide_img");
@@ -87,4 +77,14 @@ function showSlides(n) {
    slides[slideIndex-1].style.display = "block";  
  }
 
+
+ showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex = slideIndex + n); 
+}
+
+function currentSlide(n) {  
+  showSlides(slideIndex = n);
+}
 
